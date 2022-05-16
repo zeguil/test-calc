@@ -28,7 +28,7 @@ def send_email(email, token, name):
     HOST_SMTP_UMBLER = "smtp.umbler.com"
     PORT_UMBLER = 587
     EMAIL_UMBLER = "contato@guilhermelins.dev.br"
-    SENHA_UMBLER = config("SENHA_UMBLER")
+    SENHA_UMBLER = os.environ['SENHA_UMBLER']
 
     #Entrando no servidor
     server = smtplib.SMTP(HOST_SMTP_UMBLER, PORT_UMBLER)
