@@ -24,11 +24,11 @@ def send_email(email, token, name):
 
     html = render_template('email.j2', token=token, name=name)
 
-    # UMBLER VARS 
-    HOST_SMTP_UMBLER = config('HOST_SMTP_UMBLER') 
-    PORT_UMBLER = config('PORT_UMBLER') 
-    EMAIL_UMBLER = config('EMAIL_UMBLER') 
-    SENHA_UMBLER = config('SENHA_UMBLER') 
+    # UMBLER VARS
+    HOST_SMTP_UMBLER = "smtp.umbler.com"
+    PORT_UMBLER = 587
+    EMAIL_UMBLER = "contato@guilhermelins.dev.br"
+    SENHA_UMBLER = config("SENHA_UMBLER")
 
     #Entrando no servidor
     server = smtplib.SMTP(HOST_SMTP_UMBLER, PORT_UMBLER)
